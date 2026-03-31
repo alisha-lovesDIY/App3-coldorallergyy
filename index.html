@@ -50,6 +50,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+	function showResult() {
+  let total = allergy + cold;
+
+  let allergyPercent = (allergy / total) * 100;
+  let coldPercent = (cold / total) * 100;
+
+  document.getElementById("result").innerHTML =
+    "Allergy: " + allergyPercent.toFixed(0) + "%<br>" +
+    "Cold: " + coldPercent.toFixed(0) + "%";
+}
   </script>
 
 
@@ -107,7 +117,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
-	
+<p>Do you have a fever?</p>
+<a href="#three" onclick="addCold()" class="w3-btn w3-black">Yes</a>
+<a href="#three" onclick="addAllergy()" class="w3-btn w3-black">No</a>
 	<div id="content" class="w3-container">
 		<p>Content of page 2 goes here.</p>
 	</div>
