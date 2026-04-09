@@ -50,10 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	function calculateResults() {
-  var allergyPercent = (allergy_count / 6) * 100;
-  var coldPercent = (cold_count / 6) * 100;
+var total = allergy_count + cold_count;
 
-		var resultText = document.getElementById
+var allergyPercent = (allergy_count / total) * 100;
+var coldPercent = (cold_count / total) * 100;
+
+		var resultText = document.getElementById("results");
 
  resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(0) + "%" +
 						"<br> Probability it is a cold =" + coldPercent.toFixed(0) + "%";
@@ -128,13 +130,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-<a href="#three" onclick="addCold()" class="w3-btn w3-black">Yes</a>
-<a href="#three" onclick="addAllergy()" class="w3-btn w3-black">No</a>
-<footer class="w3-bottom w3-container w3-flat-carrot">
-		<p>DIY!</p>
-	</footer>
-</div>
+<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
+<a href="#three" onclick="coldAdd()" class="w3-btn w3-black">No</a>
 
+		<footer class="w3-bottom w3-container w3-flat-carrot">
+			<p>DIY!</p>
+		</footer>
+	</div>
 
 
 	
@@ -147,11 +149,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		<a href="#four" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#four" onclick="addCold()" class="w3-btn w3-black">No</a>
-		<footer class="w3-bottom w3-container w3-flat-correct">
+
+		<footer class="w3-bottom w3-container w3-flat-carrot">
 			<p>DIY!</p>
 		</footer>
 	</div>
-
 
 
 		
@@ -165,7 +167,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#five" onclick="addCold()" class="w3-btn w3-black">No</a>
 
-		<footer class="w3-bottom-w3-container w3-flat-correct">
+		<footer class="w3-bottom w3-container w3-flat-carrot">
 			<p>DIY!</p>
 		</footer>
 	</div>
@@ -179,27 +181,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Have your symptoms lasted for longer than one week?</p>
 		<a href="#six" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#six" onclick="addCold()" class="w3-btn w3-black">No</a>
-		<footer class="w3-bottom-w3-container w3-flat-correct">
+	
+		<footer class="w3-bottom w3-container w3-flat-carrot">
 			<p>DIY!</p>
 		</footer>
 	</div>
 
-
 				
 				<div class="page" id="six">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</header>
+    <div id="header" class="w3-container w3-flat-carrot">
+        <h1>Question 6</h1>
+    </div>
 	<div class="w3-container">
 		<p>Have you experienced body aches?</p>
 		<a href="resultsPage" onclick="coldAdd(); calculateResults(); class="w3-btn w3-black w3-round">Yes</a>
 		<a href="resultsPage" onclick="allergyAdd(); calculateResults(); class="w3-btn w3-black w3-round">No</a>
-		<footer class="w3-bottom-w3-container w3-flat-correct">
+
+		<footer class="w3-bottom w3-container w3-flat-carrot">
 			<p>DIY!</p>
 		</footer>
 	</div>
-
-					<div class="page" id="five">
+		
+					<div class="page" id="six">
 					<div class="w3-container w3-flat-carrot">
 							<h1>cold or allergies</h1>
 					</div>
@@ -207,7 +210,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 					<div id="content" class="w3-container">
 						<a href="resultsPage" onclick="calculateResults();" class="w3-btn w3-black">Get Results</a>
 					<div class="page" id="resultsPage">
-						<header class="w3-container w3-container w3-flat-correct">
+						<header class="w3-container w3-flat-carrot">
 							<h1>Results</h1>
 						</header>
 
