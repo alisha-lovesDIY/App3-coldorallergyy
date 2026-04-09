@@ -55,7 +55,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 		var resultText = document.getElementById
 
- ("result").innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(0) + "%" +
+ resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(0) + "%" +
 						"<br> Probability it is a cold =" + coldPercent.toFixed(0) + "%";
 			
 
@@ -100,6 +100,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div> <!-- adding this because it seems to be missing????? -->
+
+
+
+
 	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -111,30 +115,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#two" onclick="addCold()" class="w3-btn w3-black">No</a>
 
-
+		<footer class="w3-bottom-w3-container w3-flat-correct">
+			<p>DIY!</p>
+		</footer>
 	</div>
 	
 
-    	<div id="content" class="w3-container">
-   
-    	</div>
-</div>
-
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Question 2</h1>
 	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
 <a href="#three" onclick="addCold()" class="w3-btn w3-black">Yes</a>
 <a href="#three" onclick="addAllergy()" class="w3-btn w3-black">No</a>
-	<div id="content" class="w3-container">
-
-	</div>
-</div>	
-
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
+	</div>
 
+
+
+	
 	<div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -144,12 +147,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Do you have a sore throat?</p>
 		<a href="#four" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#four" onclick="addCold()" class="w3-btn w3-black">No</a>
-
 		<footer class="w3-bottom-w3-container w3-flat-correct">
 			<p>DIY!</p>
 		</footer>
 	</div>
 
+
+
+		
 		<div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -165,7 +170,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</footer>
 	</div>
 
-			<div class="page" id="one">
+			<div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 	</div>
@@ -174,18 +179,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Have your symptoms lasted for longer than one week?.</p>
 		<a href="#six" onclick="addAllergy()" class="w3-btn w3-black">Yes</a>
 		<a href="#six" onclick="addCold()" class="w3-btn w3-black">No</a>
-
 		<footer class="w3-bottom-w3-container w3-flat-correct">
 			<p>DIY!</p>
 		</footer>
 	</div>
 
+
+				
 				<div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
-	</div>
-
-	<div id="content" class="w3-container">
+	</header>
+	<div class="w3-container">
 		<p>Have ypu experienced body aches?</p>
 		<a href="resultsPage" onclick="coldAdd(); calculateResults(); class="w3btn-w3-black w3-round">Yes</a>
 		<a href="resultsPage" onclick="allergyAdd(); calculateResults(); class="w3btn-w3-black w3-round">No</a>
@@ -206,12 +211,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 							<h1>Results</h1>
 						</header>
 
-						<!-- <div class="w3-container">
-							<p id-"results"></p> div>
+						<div class="w3-container">
+							<p id="results"></p> </div>
 						<footer class="w3-bottom w3-container w3-flat-correct">
 							<p>DIY!</p>
 						</footer>
-						</div> -->
+						</div>
 
 						<footer class="w3-bottom w3-container w3-flat-correct" style="z-index: 10;">
 							<p>DIY!</p>
