@@ -35,32 +35,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head>
 
 <script>
-var allergy_count = 0;
-var cold_count = 0;
+var allergy_count = 0; // Keeps track of how many allergy answers the user gives
+var cold_count = 0; // Keeps track of how many cold answers the user gives
 
 function allergyAdd() {
   allergy_count++;
-}
+} // Adds a count to allergies
 
 function coldAdd() {
   cold_count++;
-}
+} // Adds a count to cold
 
-function calculateResults() {
-  var total = allergy_count + cold_count;
+function calculateResults() { // Takes all the answers and turns them into percentages for a cold or allergy
+  var total = allergy_count + cold_count; // Adds the cold and allergy answers together
 
-  if (total === 0) {
-    document.getElementById("results").innerHTML = "No answers selected.";
-    return;
-  }
-
-  var allergyPercent = (allergy_count / total) * 100;
-  var coldPercent = (cold_count / total) * 100;
+  var allergyPercent = (allergy_count / total) * 100; // Gives a percentage for the potential of allergies
+  var coldPercent = (cold_count / total) * 100; // Gives a percentage for the potential of a cold
 
   document.getElementById("results").innerHTML =
     "Probability it is allergies = " + allergyPercent.toFixed(0) + "%" +
     "<br>Probability it is a cold = " + coldPercent.toFixed(0) + "%";
-}
+} // Finds HTML and replaces it with the results
 </script>
 
 <style>
@@ -81,19 +76,19 @@ function calculateResults() {
 
 <body>
 
-<!-- HEADER -->
+<!-- This is essentially the title page -->
 <div id="header" class="w3-container w3-flat-carrot">
   <h1>Cold or Allergies?</h1>
 </div>
 
-<!-- HOME PAGE -->
+<!-- This is the introduction to the app -->
   <div id ="content" class="w3-container">
     <p>Are you feeling like you might have a cold but wonder if it is allergies?</p>
 
     <a href="#one" class="w3-btn w3-grey w3-round">Get Started</a>
   </div>
 
-<!-- This page is asking about question 1 --> 
+<!-- This page is asking about the first symptom and contains a yes or no button --> 
 <div class="page" id="one">
   <div class="w3-container w3-flat-carrot"><h1>Question 1</h1></div>
 
@@ -107,7 +102,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- QUESTION 2 -->
+<!-- This page is asking about the second symptom and contains a yes or no button -->
 <div class="page" id="two">
   <div class="w3-container w3-flat-carrot"><h1>Question 2</h1></div>
 
@@ -119,7 +114,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- QUESTION 3 -->
+<!-- This page is asking about the third symptom and contains a yes or no button -->
 <div class="page" id="three">
   <div class="w3-container w3-flat-carrot"><h1>Question 3</h1></div>
 
@@ -131,7 +126,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- QUESTION 4 -->
+<!-- This page is asking about the fourth symptom and contains a yes or no button -->
 <div class="page" id="four">
   <div class="w3-container w3-flat-carrot"><h1>Question 4</h1></div>
 
@@ -143,7 +138,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- QUESTION 5 -->
+<!-- This page is asking about the fifth symptom and contains a yes or no button -->
 <div class="page" id="five">
   <div class="w3-container w3-flat-carrot"><h1>Question 5</h1></div>
 
@@ -155,7 +150,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- QUESTION 6 -->
+<!-- This page is asking about the sixth symptom and contains a yes or no button -->
 <div class="page" id="six">
   <div class="w3-container w3-flat-carrot"><h1>Question 6</h1></div>
 
@@ -167,7 +162,7 @@ function calculateResults() {
   </div>
 </div>
 
-<!-- RESULTS PAGE -->
+<!-- This is the results page that displays the percentages of the potential of a cold or allergy -->
 <div class="page" id="resultsPage">
 
   <div class="w3-container w3-flat-carrot">
