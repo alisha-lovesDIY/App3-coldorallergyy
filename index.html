@@ -83,23 +83,27 @@ function calculateResults() { // Takes all the answers and turns them into perce
 
 <!-- This is the introduction to the app -->
   <div id ="content" class="w3-container">
-    <p>Are you feeling like you might have a cold but wonder if it is allergies?</p>
+    <p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
 
     <a href="#one" class="w3-btn w3-grey w3-round">Get Started</a>
   </div>
-
+	
+  <footer class="w3-bottom w3-container w3-flat-carrot">
+    <p>DIY!</p>
+  </footer>
+</div>
+	
 <!-- This page is asking about the first symptom and contains a yes or no button --> 
 <div class="page" id="one">
   <div class="w3-container w3-flat-carrot"><h1>Question 1</h1></div>
 
   <div class="w3-container">
     <p>Are your eyes watery or itchy?</p>
-
     <a href="#two" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
     <a href="#two" onclick="coldAdd()" class="w3-btn w3-black">No</a>
-	  <footer class="w3-bottom w3-container w3-flat-carrot"> 
-		  <p>DIY!</p> </footer>
   </div>
+	
+	  <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p> </footer>
 </div>
 
 <!-- This page is asking about the second symptom and contains a yes or no button -->
@@ -112,6 +116,8 @@ function calculateResults() { // Takes all the answers and turns them into perce
     <a href="#three" onclick="coldAdd()" class="w3-btn w3-black">Yes</a>
     <a href="#three" onclick="allergyAdd()" class="w3-btn w3-black">No</a>
   </div>
+	
+	 <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
 <!-- This page is asking about the third symptom and contains a yes or no button -->
@@ -124,6 +130,7 @@ function calculateResults() { // Takes all the answers and turns them into perce
     <a href="#four" onclick="coldAdd()" class="w3-btn w3-black">Yes</a>
     <a href="#four" onclick="allergyAdd()" class="w3-btn w3-black">No</a>
   </div>
+	<footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
 <!-- This page is asking about the fourth symptom and contains a yes or no button -->
@@ -136,6 +143,7 @@ function calculateResults() { // Takes all the answers and turns them into perce
     <a href="#five" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
     <a href="#five" onclick="coldAdd()" class="w3-btn w3-black">No</a>
   </div>
+	  <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
 <!-- This page is asking about the fifth symptom and contains a yes or no button -->
@@ -148,6 +156,7 @@ function calculateResults() { // Takes all the answers and turns them into perce
     <a href="#six" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
     <a href="#six" onclick="coldAdd()" class="w3-btn w3-black">No</a>
   </div>
+	  <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
 <!-- This page is asking about the sixth symptom and contains a yes or no button -->
@@ -160,6 +169,7 @@ function calculateResults() { // Takes all the answers and turns them into perce
     <a href="#resultsPage" onclick="coldAdd(); calculateResults();" class="w3-btn w3-black w3-round">Yes</a>
     <a href="#resultsPage" onclick="allergyAdd(); calculateResults();" class="w3-btn w3-black w3-round">No</a>
   </div>
+	  <footer class="w3-bottom w3-container w3-flat-carrot"><p>DIY!</p></footer>
 </div>
 
 <!-- This is the results page that displays the percentages of the potential of a cold or allergy -->
